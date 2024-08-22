@@ -1,16 +1,37 @@
 ﻿namespace HealthApp.Server
 {
+    enum ActivityLevels
+    {
+        sedentary,
+        light,
+        moderate,
+        active,
+        very
+    };
+    public static class ActivityLevelMethods
+    {
+        public static decimal GetActivityValue(this string activityValue)
+        {
+            
+            switch (activityValue)
+            {
+                case nameof(ActivityLevels.sedentary):
+                    return  (decimal)1.2;
+                case nameof(ActivityLevels.light):
+                    return (decimal)1.375;
+                case nameof(ActivityLevels.moderate):
+                    return (decimal)1.55;
+                case nameof(ActivityLevels.active):
+                    return (decimal)1.725;
+                case nameof(ActivityLevels.very):
+                    return (decimal)1.9;
+                default:
+                    return -1;
+            }
+        }
+    }
     public class BodyMeasurement
     {
-        private static readonly Dictionary<string, decimal> ActivityLevels = new()
-        {
-            { "sedentary", (decimal)1.2 },
-            { "light", (decimal)1.375 },
-            { "moderate", (decimal)1.55 },
-            { "active", (decimal)1.725 },
-            { "very", (decimal)1.9 },
-        };
-
         public DateOnly Date { get; set; }
         public int Age { get; set; }
         public string? Gender { get; set; }
@@ -40,9 +61,9 @@
         /// The resulting number is the daily Kilocalorie intake required to maintain current body rate.
         /// </summary>
         /// <returns>decimal</returns>
-        public decimal BMR()
+        public decimal BMR(string activityLevel)
         {
-            decimal multiplier = ActivityLevels.GetValueOrDefault(this.ActivityLevel);
+            decimal multiplier = ActivityLevelMethods.GetActivityValue(activityLevel);
             decimal RMR = this.RMR();
             return RMR * multiplier;
         }

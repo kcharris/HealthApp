@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthApp.Server", "HealthApp.Server\HealthApp.Server.csproj", "{9606ACBE-D50B-42F0-9582-7A8D458C24D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthApp.Server", "HealthApp.Server\HealthApp.Server.csproj", "{9606ACBE-D50B-42F0-9582-7A8D458C24D1}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "healthapp.client", "healthapp.client\healthapp.client.esproj", "{A21C33E8-8AB3-4001-AB64-A2DEDAC7C8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTests", "ServerTests\ServerTests.csproj", "{97AFF553-F8CF-4FF1-BEDC-59DE95E2F371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{A21C33E8-8AB3-4001-AB64-A2DEDAC7C8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A21C33E8-8AB3-4001-AB64-A2DEDAC7C8DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A21C33E8-8AB3-4001-AB64-A2DEDAC7C8DD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{97AFF553-F8CF-4FF1-BEDC-59DE95E2F371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AFF553-F8CF-4FF1-BEDC-59DE95E2F371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AFF553-F8CF-4FF1-BEDC-59DE95E2F371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AFF553-F8CF-4FF1-BEDC-59DE95E2F371}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
