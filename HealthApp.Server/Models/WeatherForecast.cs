@@ -1,4 +1,4 @@
-namespace HealthApp.Server
+namespace HealthApp.Server.Models
 {
     public class WeatherForecast
     {

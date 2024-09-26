@@ -1,3 +1,4 @@
+using HealthApp.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HealthApp.Server.Controllers

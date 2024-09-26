@@ -1,4 +1,4 @@
-using HealthApp.Server;
+using HealthApp.Server.Services;
 
 namespace ServerTests
 {
